@@ -6,7 +6,6 @@
  * @number: number to be insert
  * Return: address of new node on successful insertion
  */
-
 listint_t *insert_node(listint_t **head, int number)
 {
 	listint_t *node = *head, *new;
