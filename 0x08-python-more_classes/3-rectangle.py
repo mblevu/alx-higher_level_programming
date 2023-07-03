@@ -27,7 +27,7 @@ class Rectangle:
             int: width of the rectangle
         """
         return (self.__width)
-   
+
     @width.setter
     def width(self, value):
         """
@@ -43,7 +43,7 @@ class Rectangle:
         if value < 0:
             raise ValueError("width must be an integer")
         self.__width = value
-    
+
     @property
     def height(self):
         """
@@ -53,6 +53,7 @@ class Rectangle:
             int: The height of the rectangle.
         """
         return (self.__height)
+
     @height.setter
     def height(self, value):
         """
@@ -70,7 +71,7 @@ class Rectangle:
         if value < 0:
             raise ValueError("height must be >= 0")
         self.__height = value
-    
+
     def area(self):
         """
         Calculates and returns the area of the rectangle.
@@ -79,7 +80,7 @@ class Rectangle:
             int: The area of the rectangle.
         """
         return (self.__width * self.__height)
-    
+
     def perimeter(self):
         """
         Calculates and returns the perimeter of the rectangle.
@@ -90,7 +91,7 @@ class Rectangle:
         if self.__width == 0 or self.__height == 0:
             return (0)
         return (2 * (self.__width + self.__height))
-    
+
     def __str__(self):
         """
         Returns a string representation of the rectangle.
@@ -101,7 +102,7 @@ class Rectangle:
         if self.__width == 0 or self.__height == 0:
             return ("")
         return '\n'.join(['#' * self.__width for _ in range(self.__height)])
-    
+
     def __repr__(self):
         """
         Returns a string representation of the rectangle.
