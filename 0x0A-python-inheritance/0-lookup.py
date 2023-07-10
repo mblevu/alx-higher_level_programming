@@ -2,7 +2,8 @@
 
 def lookup(obj):
     """
-    Returns a list of available attributes and methods of an object.
+    Returns a list of available attributes
+    and methods of an object.
 
     Args:
         obj: The object to inspect.
@@ -10,4 +11,4 @@ def lookup(obj):
     Returns:
         A list of available attributes and methods.
     """
-    return dir(obj)
+    return [attribute for attribute in dir(obj) if not callable(getattr(obj, attribute)) or attribute.startswith('__')]
