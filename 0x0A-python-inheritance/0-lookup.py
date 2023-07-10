@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+"""Defines an object attribute lookup function."""
 
 def lookup(obj):
     """
@@ -11,4 +12,7 @@ def lookup(obj):
     Returns:
         A list of available attributes and methods.
     """
-    return [attribute for attribute in dir(obj) if not callable(getattr(obj, attribute)) or attribute.startswith('__')]
+    return [attribute
+            for attribute in dir(obj)
+            if not callable(getattr(obj, attribute))
+            or attribute.startswith('__')]
