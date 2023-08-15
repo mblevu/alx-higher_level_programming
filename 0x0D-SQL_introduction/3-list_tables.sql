@@ -1,2 +1,2 @@
---Lists all tables of a database on mysql server
+-- Lists all tables of a database on mysql server
 SHOW TABLES;
