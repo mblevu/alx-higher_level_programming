@@ -5,18 +5,9 @@ import sys
 
 
 if __name__ == "__main__":
-    if len(sys.argv) != 4:
-        print("Usage: {} <username> <password> <database>".format(sys.argv[0]))
-        sys.exut(1)
-
-    username = sys.argv[1]
-    password = sys.argv[2]
-    database_name = sys.argv[3]
-
-    try:
         db = MySQLdb.connect(host="localhost", port=3306,
-                             user=username, passwd=password,
-                             db=database_name)
+                             user=sys.argv[1], passwd=sys.argv[2],
+                             db=sys.argv[3])
         cursor = db.cursor()
 
         cursor.execute(
@@ -26,8 +17,5 @@ if __name__ == "__main__":
         for state in states:
             print(state)
 
-    except MySQLdb.Error as e:
-        print("MySQL Error: {}".format(e))
-    finally:
         cursor.close()
         db.close()
