@@ -12,10 +12,11 @@ if __name__ == "__main__":
 
     cursor.execute(
         "SELECT * FROM states WHERE name LIKE 'N%' ORDER BY id ")
-    states = cursor.fetchall()
+    
+    rows = cursor.fetchall()
 
-    for state in states:
-        print(state)
+    for row in rows:
+        print(row)
 
     cursor.close()
     db.close()
