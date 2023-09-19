@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+""" Selects all states starting with N ordered by id"""
 import MySQLdb
 import sys
 
