@@ -1,5 +1,6 @@
-#!usr/bin/python3
-"""changes the name of a state object as argument from database"""
+#!/usr/bin/python3
+""" prints the State object with the name passed as argument from the database
+"""
 import sys
 from model_state import Base, State
 from sqlalchemy import (create_engine)
